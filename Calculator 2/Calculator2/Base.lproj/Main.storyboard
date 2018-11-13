@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Inclass02b" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dj7-Qf-pBB">
+                                <rect key="frame" x="16" y="65" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Second Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-0y-zns">
+                                <rect key="frame" x="16" y="111" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result : 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNa-ne-toJ">
+                                <rect key="frame" x="16" y="166" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dws-Ee-k78">
+                                <rect key="frame" x="16" y="212" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Add"/>
+                                    <segment title="Subtract"/>
+                                    <segment title="Multiply"/>
+                                    <segment title="Divide"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectedSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="qvs-EK-GKt"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSa-xg-EUF">
+                                <rect key="frame" x="16" y="265" width="288" height="30"/>
+                                <state key="normal" title="Clear All"/>
+                                <connections>
+                                    <action selector="clearAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nX-dy-rUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gja-ua-ohz">
+                                <rect key="frame" x="16" y="310" width="288" height="30"/>
+                                <state key="normal" title="Perform Operation"/>
+                                <connections>
+                                    <action selector="operation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDa-q9-Oqf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dj7-Qf-pBB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="7rn-tc-S2y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gja-ua-ohz" secondAttribute="trailing" constant="16" id="7uO-6b-hha"/>
+                            <constraint firstItem="Dws-Ee-k78" firstAttribute="top" secondItem="SNa-ne-toJ" secondAttribute="bottom" constant="25" id="8My-Bi-eC6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dj7-Qf-pBB" secondAttribute="trailing" constant="16" id="9fc-ks-8rH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SNa-ne-toJ" secondAttribute="trailing" constant="16" id="DZN-PR-m0V"/>
+                            <constraint firstItem="PSa-xg-EUF" firstAttribute="top" secondItem="Dws-Ee-k78" secondAttribute="bottom" constant="25" id="GfW-MQ-z4m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PSa-xg-EUF" secondAttribute="trailing" constant="16" id="Khx-gC-VgH"/>
+                            <constraint firstItem="Gja-ua-ohz" firstAttribute="top" secondItem="PSa-xg-EUF" secondAttribute="bottom" constant="15" id="LPQ-jV-L05"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dws-Ee-k78" secondAttribute="trailing" constant="16" id="Qkk-op-Zeu"/>
+                            <constraint firstItem="Dj7-Qf-pBB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TPk-lD-v4e"/>
+                            <constraint firstItem="Tuk-0y-zns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tnk-Wy-9Ph"/>
+                            <constraint firstItem="Gja-ua-ohz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dg1-SW-tFx"/>
+                            <constraint firstItem="SNa-ne-toJ" firstAttribute="top" secondItem="Tuk-0y-zns" secondAttribute="bottom" constant="25" id="hQ8-0U-InO"/>
+                            <constraint firstItem="Tuk-0y-zns" firstAttribute="top" secondItem="Dj7-Qf-pBB" secondAttribute="bottom" constant="16" id="j53-JP-l7p"/>
+                            <constraint firstItem="PSa-xg-EUF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rRd-sZ-JW7"/>
+                            <constraint firstItem="Dws-Ee-k78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uc0-nV-vi3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tuk-0y-zns" secondAttribute="trailing" constant="16" id="vVh-fH-hU8"/>
+                            <constraint firstItem="SNa-ne-toJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z5m-nG-mFC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNumber" destination="Dj7-Qf-pBB" id="mOs-e8-ttF"/>
+                        <outlet property="result" destination="SNa-ne-toJ" id="4Wx-PU-pHg"/>
+                        <outlet property="secondNumber" destination="Tuk-0y-zns" id="64u-d9-bFB"/>
+                        <outlet property="segmentedControl" destination="Dws-Ee-k78" id="Par-OL-yKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
